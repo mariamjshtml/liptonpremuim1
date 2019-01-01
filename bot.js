@@ -14,6 +14,48 @@ client.on('guildMemberAdd', member=> {
 
 /////////////////////////
 /////////////////////////
+client.on('message', message => {
+    if (message.content.startsWith(prefix + "help")) {
+let embed = new Discord.RichEmbed()
+.setThumbnail(message.author.avatarURL)
+.addField('     **+help-gn** ' ,' **اوامر عامة** ')
+.addField('     **+help-ad**  ' ,' **اوامر ادارية** ')
+.addField('     **+help-mu**  ' ,' **اوامر ميوزك** ')
+.setColor('RANDOM')
+message.channel.sendEmbed(embed);
+}
+});
+client.on('message', message => {
+    if (message.content.startsWith(prefix + "help-gn")) {
+let embed = new Discord.RichEmbed()
+.setThumbnail(message.author.avatarURL)
+.addField('     **soon** ' ,' **soon** ')
+.addField('     **soon**  ' ,' **soon** ')
+.setColor('RANDOM')
+message.channel.sendEmbed(embed);
+}
+});
+client.on('message', message => {
+    if (message.content.startsWith(prefix + "help-ad")) {
+let embed = new Discord.RichEmbed()
+.setThumbnail(message.author.avatarURL)
+.addField('     **soon** ' ,' **soon** ')
+.addField('     **soon**  ' ,' **soon** ')
+.setColor('RANDOM')
+message.channel.sendEmbed(embed);
+}
+});
+client.on('message', message => {
+    if (message.content.startsWith(prefix + "help-mu")) {
+let embed = new Discord.RichEmbed()
+.setThumbnail(message.author.avatarURL)
+.addField('     **soon** ' ,' **soon** ')
+.addField('     **soon**  ' ,' **soon** ')
+.setColor('RANDOM')
+message.channel.sendEmbed(embed);
+}
+});
+//finish help//
 client.on("message", message => {
     var prefix = "+";
  if (message.content === "+help") {
