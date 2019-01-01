@@ -56,62 +56,6 @@ message.channel.sendEmbed(embed);
 }
 });
 //finish help//
-client.on("message", message => {
-    var prefix = "+";
- if (message.content === "+help") {
-  const embed = new Discord.RichEmbed()  
-      .setColor("RANDOM")
-      .setDescription(`
-     
-             Please Select Your Language
-${prefix}help-ar
-${prefix}help-en
-             
-      `)
-   message.channel.sendEmbed(embed)
-   
-   }
-});
-
-client.on("message", message => {
- if (message.content === "+help-ar") {
-  const embed = new Discord.RichEmbed()  
-      .setColor("RANDOM")
-      .setDescription(`
-     
-            اختر:
- 
-+help-gn-ar  ⇏ اوامر عامة
-
-+help-ad-ar  ⇏ اوامر ادارة السيرفر
-
-+help-mu-ar  ⇏ اوامر ميوزك
-
-`)  
-message.channel.sendEmbed(embed)
- 
-}
-});
-
-client.on("message", message => {
- if (message.content === "+help-en") {
-  const embed = new Discord.RichEmbed()  
-      .setColor("RANDOM")
-      .setDescription(`
-     
-            اختر:
- 
-+help-gn-en  ⇏ General commands
-   
-+help-ad-en  ⇏ Server management commands
-
-+help-mu-en  ⇏ Music Commands
-             
-`)
-message.channel.sendEmbed(embed)
- 
-}
-});
 
 const antic = JSON.parse(fs.readFileSync('./antic.json', 'utf8'));
 client.on("message", message =>{
